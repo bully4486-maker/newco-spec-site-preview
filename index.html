@@ -7,15 +7,17 @@
   <meta name="robots" content="noindex,nofollow" />
   <meta name="description" content="Proposed Spec-Site T1 Presence mockups for Oxon/Berks plumbers. Not live customer sites. Not Google-affiliated. £179 publish + handover." />
   <style>
-    body { font-family: system-ui, sans-serif; max-width: 680px; margin: 2rem auto; padding: 0 1rem; line-height: 1.55; color: #0f172a; background: #f8fafc; }
-    .banner { background: #fef3c7; color: #92400e; padding: 0.75rem 1rem; border-radius: 8px; font-weight: 600; border: 1px solid #f59e0b; }
-    h1 { font-size: 1.5rem; margin: 1.25rem 0 0.5rem; }
-    a { color: #0369a1; }
-    .price { color: #15803d; font-weight: 600; }
-    .muted { color: #64748b; font-size: 0.9rem; }
-    ul { padding-left: 1.2rem; }
-    li { margin: 0.4rem 0; }
-    code { font-size: 0.85em; background: #e2e8f0; padding: 0.1em 0.35em; border-radius: 4px; }
+    body{font-family:system-ui,sans-serif;max-width:720px;margin:2rem auto;padding:0 1rem;line-height:1.55;color:#0f172a;background:#f8fafc}
+    .banner{background:#fef3c7;color:#92400e;padding:.75rem 1rem;border-radius:8px;font-weight:600;border:1px solid #f59e0b}
+    h1{font-size:1.55rem;margin:1.25rem 0 .5rem}
+    a{color:#0369a1}
+    .price{color:#15803d;font-weight:600}
+    .muted{color:#64748b;font-size:.92rem}
+    .cards{display:grid;gap:.85rem;margin:1.25rem 0}
+    .card{background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:1rem 1.1rem;display:grid;grid-template-columns:120px 1fr;gap:1rem;align-items:center}
+    .card img{width:120px;height:80px;object-fit:cover;border-radius:10px}
+    @media(max-width:520px){.card{grid-template-columns:1fr}}
+    code{font-size:.85em;background:#e2e8f0;padding:.1em .35em;border-radius:4px}
   </style>
 </head>
 <body>
@@ -23,13 +25,24 @@
   <h1>Spec-Site · T1 Presence demos</h1>
   <p>Week-1 niche: Oxfordshire + Berkshire domestic plumbers / heating-plumbers.</p>
   <p class="price">T1 Presence: £179 publish · handover to their domain + edit access</p>
-  <p class="muted">Each demo has a <strong>logo slot</strong> and <strong>photo strip</strong>: unlimited photo intake — we curate for web; full catalog archived in the customer Drive folder (placeholders until they send files).</p>
-  <p class="muted">T2 Book &amp; Pay (Cal.com / Stripe under customer accounts) is an upgrade — not in these demos. Branded <code>preview.newcopacks.co.uk</code> still needs CF/DNS later.</p>
-  <h2>Samples</h2>
-  <ul>
-    <li><a href="demos/demo-acme-plumbing-oxford.html">Acme Plumbing Oxford (Oxfordshire)</a></li>
-    <li><a href="demos/demo-thames-heating-reading.html">Thames Heating &amp; Plumbing (Reading, Berkshire)</a></li>
-  </ul>
-  <p class="muted">Source templates live in NewCo ops pack <code>ops/spec_site/</code>. Honest banner required on every demo until paid publish.</p>
+  <p class="muted">Polished trade layout: hero, trust bar, service cards, photo gallery with <strong>draft stock</strong>, sticky call. <strong>Unlimited photo intake</strong> — we curate for web; full catalog archived in customer Drive. Logo = text/mark lockup until customer file.</p>
+  <p class="muted">T2 Book &amp; Pay (Cal.com / Stripe under customer accounts) is an upgrade — <strong>not</strong> in these demos. Stack lock: <code>SPEC_SITE_STACK_LOCK_V1.md</code>.</p>
+  <div class="cards">
+    <a class="card" href="demos/demo-acme-plumbing-oxford.html" style="text-decoration:none;color:inherit">
+      <img src="assets/hero-plumber.jpg" alt="" />
+      <div>
+        <strong>Acme Plumbing Oxford</strong>
+        <div class="muted">Oxfordshire · plumber / heating</div>
+      </div>
+    </a>
+    <a class="card" href="demos/demo-thames-heating-reading.html" style="text-decoration:none;color:inherit">
+      <img src="assets/gallery-boiler.jpg" alt="" />
+      <div>
+        <strong>Thames Heating &amp; Plumbing</strong>
+        <div class="muted">Reading, Berkshire · heating-plumber</div>
+      </div>
+    </a>
+  </div>
+  <p class="muted">Source templates: NewCo ops <code>ops/spec_site/</code>. Honest banner on every demo until paid publish.</p>
 </body>
 </html>

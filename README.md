@@ -9,3 +9,6 @@ Public static preview of **NewCo Spec-Site T1 Presence** mockups (Oxon + Berks p
 - Stack lock: `ops/SPEC_SITE_STACK_LOCK_V1.md`
 
 GitHub Pages serves this repo. Branded `preview.newcopacks.co.uk` needs CF/DNS later.
+
+## Draft stock images
+Local `/assets/*.jpg` from Unsplash (royalty-free) — labelled **Draft stock** on demos until customer photos arrive. Unlimited intake; we curate for web; full archive in customer Drive. See `ops/SPEC_SITE_STACK_LOCK_V1.md`.
