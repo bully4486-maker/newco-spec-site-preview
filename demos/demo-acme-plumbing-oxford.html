@@ -48,6 +48,74 @@
     .cta-strip a.btn-primary { background: var(--accent-dark); color: #fff; margin-top: 0.75rem; }
     .upgrade-note { margin-top: 0.85rem; font-size: 0.8rem; color: #94a3b8; font-weight: 500; }
     footer { border-top: 1px solid var(--line); padding: 1rem 1.25rem 1.75rem; font-size: 0.8rem; color: var(--muted); text-align: center; }
+
+    .logo-slot {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 72px;
+      min-height: 72px;
+      max-width: 140px;
+      max-height: 72px;
+      margin-bottom: 0.85rem;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.18);
+      border: 2px dashed rgba(255,255,255,0.55);
+      color: #fff;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 0.35rem 0.5rem;
+      text-align: center;
+      overflow: hidden;
+    }
+    .logo-slot img {
+      display: block;
+      max-width: 140px;
+      max-height: 64px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+    }
+    .logo-slot.is-text {
+      border-style: solid;
+      background: rgba(255,255,255,0.95);
+      color: var(--accent-dark);
+      font-size: 0.85rem;
+      letter-spacing: 0;
+      text-transform: none;
+      padding: 0.5rem 0.75rem;
+    }
+    .photo-strip {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 0.65rem;
+      margin-top: 0.5rem;
+    }
+    .photo-slot {
+      aspect-ratio: 4 / 3;
+      border-radius: 10px;
+      border: 2px dashed var(--line);
+      background: #f1f5f9;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.5rem;
+      overflow: hidden;
+    }
+    .photo-slot img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .photo-strip-note { font-size: 0.8rem; color: var(--muted); margin: 0 0 0.35rem; }
+
     .price-note { color: var(--ok); font-weight: 600; }
   </style>
 </head>
@@ -57,6 +125,10 @@
   </div>
   <header>
     <div class="wrap">
+      <div class="logo-slot" role="img" aria-label="Logo slot — customer asset or text logo">
+        <!-- LOGO: replace contents with <img src="assets/logo.EXT" alt="Business name"> when customer sends file; else keep text logo -->
+        Acme Plumbing<br />Oxford
+      </div>
       <p class="eyebrow">Domestic plumber / heating · serving Oxford, Abingdon, Kidlington &amp; Oxon</p>
       <h1>Acme Plumbing Oxford</h1>
       <p class="tagline">Reliable local plumber — call now or message on WhatsApp.</p>
@@ -80,6 +152,17 @@
           <p><strong>Hours:</strong> Mon–Fri 8am–6pm · Sat 9am–1pm · emergency call-out by arrangement</p>
         </div>
         <p>Demo sample for Spec-Site T1 Presence (Oxon week-1). Boilers, leaks, bathrooms — layout only. Fake phone &amp; email for preview; replace from intake when pitching a real listing.</p>
+      </section>
+
+      <section class="card" id="photos">
+        <h2>Photos</h2>
+        <p class="photo-strip-note">Customer assets from intake (van / jobs / before-after / team). We place what they send — no custom shoot. Empty slots = awaiting attachments or Drive/WhatsApp folder.</p>
+        <div class="photo-strip" aria-label="Photo strip placeholders">
+          <div class="photo-slot">Photo 1<br /><span style="font-weight:500">van / job</span></div>
+          <div class="photo-slot">Photo 2<br /><span style="font-weight:500">awaiting</span></div>
+          <div class="photo-slot">Photo 3<br /><span style="font-weight:500">awaiting</span></div>
+          <div class="photo-slot">Photo 4<br /><span style="font-weight:500">optional</span></div>
+        </div>
       </section>
 
       <section class="card">
