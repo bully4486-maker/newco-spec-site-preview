@@ -23,16 +23,40 @@
     .text-primary { color: var(--primary); }
     .text-accent { color: var(--accent); }
     .bg-emergency { background: linear-gradient(90deg, #7f1d1d 0%, #0F172A 100%); }
-    .btn-accent { background-color: var(--accent); color: #0F172A; }
-    .btn-accent:hover { background-color: var(--accent-hover); color: #fff; }
+    /* TW 2.2.19 polyfill: slate/amber + opacity not in CDN build */
+    .text-slate-900 { color: #0f172a !important; }
+    .text-slate-800 { color: #1e293b !important; }
+    .text-slate-700 { color: #334155 !important; }
+    .text-slate-600 { color: #475569 !important; }
+    .text-slate-500 { color: #64748b !important; }
+    .text-slate-400 { color: #94a3b8 !important; }
+    .bg-slate-50 { background-color: #f8fafc !important; }
+    .bg-slate-200 { background-color: #e2e8f0 !important; }
+    .bg-slate-900 { background-color: #0f172a !important; }
+    .border-slate-200 { border-color: #e2e8f0 !important; }
+    .text-amber-300 { color: #fcd34d !important; }
+    .text-amber-400 { color: #fbbf24 !important; }
+    .bg-primary-80 { background-color: rgba(15, 23, 42, 0.85) !important; }
+    .bg-primary-95 { background-color: rgba(15, 23, 42, 0.95) !important; }
+    .bg-white-10 { background-color: rgba(255, 255, 255, 0.1) !important; }
+    .border-white-20 { border-color: rgba(255, 255, 255, 0.2) !important; }
+    /* CTAs — never white-on-white; dark text on amber, filled secondary */
+    .btn-accent { background-color: var(--accent) !important; color: #0F172A !important; }
+    .btn-accent:hover { background-color: var(--accent-hover) !important; color: #0F172A !important; }
+    .btn-on-dark { background-color: #ffffff !important; color: #0F172A !important; border: 2px solid #ffffff !important; }
+    .btn-on-dark:hover { background-color: var(--accent) !important; color: #0F172A !important; border-color: var(--accent) !important; }
+    .btn-navy { background-color: var(--primary) !important; color: #ffffff !important; }
+    .btn-navy:hover { background-color: #1e293b !important; color: #ffffff !important; }
     html { scroll-behavior: smooth; }
   </style>
 </head>
 <body class="font-sans antialiased pb-20 md:pb-0">
 
-  <!-- Honest mockup banner -->
-  <div class="bg-yellow-100 border-b border-yellow-500 text-yellow-900 text-center text-sm font-semibold px-4 py-2.5 relative z-50" role="note">
-    Proposed preview — <strong>not</strong> a live website · <strong>not</strong> Google-affiliated · Spec-Site T1 Presence demo (£179)
+  <!-- Visible DRAFT banner -->
+  <div class="bg-yellow-400 border-b-4 border-yellow-600 text-center text-sm md:text-base font-extrabold px-4 py-3 relative z-50" style="color:#0F172A;" role="note">
+    <span class="inline-block bg-yellow-600 text-white text-xs font-extrabold uppercase tracking-wide px-2 py-0.5 rounded mr-2 align-middle">Draft</span>
+    Draft preview only — cosmetics &amp; copy adjustable before publish; features per package (T1/T2/Care).
+    <span class="block sm:inline font-semibold mt-1 sm:mt-0 sm:ml-1"><strong>Not</strong> a live customer site · <strong>not</strong> Google-affiliated · Spec-Site T1 Presence (£179)</span>
   </div>
 
   <!-- 1) Emergency top bar -->
@@ -44,7 +68,7 @@
         <span class="hidden sm:inline text-gray-300 mx-2">|</span>
         <span class="block sm:inline font-semibold text-amber-300">Fast 30-Min Arrival</span>
       </p>
-      <a href="tel:+441180000000" class="inline-flex items-center gap-1.5 bg-accent hover:bg-accent-hover text-primary font-bold px-4 py-1.5 rounded-full text-sm transition">
+      <a href="tel:+441180000000" class="inline-flex items-center gap-1.5 bg-accent hover:bg-accent-hover text-slate-900 font-bold px-4 py-1.5 rounded-full text-sm transition">
         <i data-lucide="phone" class="w-4 h-4"></i> 0118 0000000
       </a>
     </div>
@@ -65,7 +89,7 @@
           </div>
         </div>
       </div>
-      <a href="tel:+441180000000" class="btn-accent font-bold px-5 py-2.5 rounded-full text-sm inline-flex items-center gap-1.5 transition">
+      <a href="tel:+441180000000" class="btn-accent text-slate-900 font-bold px-5 py-2.5 rounded-full text-sm inline-flex items-center gap-1.5 transition">
         <i data-lucide="phone-call" class="w-4 h-4"></i> Call Now
       </a>
     </div>
@@ -88,16 +112,16 @@
           <li class="flex items-center gap-2.5 font-semibold"><i data-lucide="check-circle" class="w-5 h-5 text-amber-400 flex-shrink-0"></i> Gas Safe</li>
         </ul>
         <div class="flex flex-wrap gap-3">
-          <a href="tel:+441180000000" class="btn-accent font-bold px-6 py-3 rounded-full inline-flex items-center gap-2 transition">
+          <a href="tel:+441180000000" class="btn-accent text-slate-900 font-bold px-6 py-3 rounded-full inline-flex items-center gap-2 transition">
             <i data-lucide="phone" class="w-5 h-5"></i> Call 0118 0000000
           </a>
-          <a href="#contact" class="border-2 border-white/70 hover:bg-white hover:text-primary font-bold px-6 py-3 rounded-full inline-flex items-center gap-2 transition">
+          <a href="#contact" class="btn-on-dark font-bold px-6 py-3 rounded-full inline-flex items-center gap-2 transition">
             <i data-lucide="phone-incoming" class="w-5 h-5"></i> Request Callback
           </a>
         </div>
       </div>
       <!-- Right: Quick Lead Form -->
-      <div id="contact" class="bg-white text-slate-800 rounded-2xl shadow-2xl p-6 md:p-7">
+      <div id="contact" class="bg-white text-slate-800 rounded-2xl shadow-2xl p-6 md:p-7" style="color:#1E293B;">
         <h2 class="text-xl font-extrabold text-primary mb-1">Get Quote in 10 Mins</h2>
         <p class="text-sm text-slate-500 mb-5">Quick lead form — opens your mail client (or Formspree on publish). No NewCo backend.</p>
         <form action="mailto:hello@thamesheating-reading.example" method="get" enctype="text/plain" class="space-y-3">
@@ -117,7 +141,7 @@
             <textarea id="msg" name="body" rows="3" placeholder="Leak, boiler, bathroom…"
               class="w-full border border-slate-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-yellow-500"></textarea>
           </div>
-          <button type="submit" class="w-full btn-accent font-extrabold py-3 rounded-xl text-sm transition inline-flex items-center justify-center gap-2">
+          <button type="submit" class="w-full btn-accent text-slate-900 font-extrabold py-3 rounded-xl text-sm transition inline-flex items-center justify-center gap-2">
             <i data-lucide="send" class="w-4 h-4"></i> Request Free Quote
           </button>
           <p class="text-xs text-slate-400 text-center">Demo: mailto · publish wires to their mailbox / Formspree</p>
@@ -236,27 +260,27 @@
     <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
       <figure class="relative rounded-xl overflow-hidden aspect-video bg-slate-200">
         <img src="../assets/gallery-boiler.jpg" alt="Boiler" class="w-full h-full object-cover" loading="lazy" />
-        <span class="absolute top-2 left-2 bg-primary/80 text-white text-xs font-bold px-2 py-0.5 rounded uppercase">Draft</span>
+        <span class="absolute top-2 left-2 bg-primary-80 text-white text-xs font-bold px-2 py-0.5 rounded uppercase">Draft</span>
       </figure>
       <figure class="relative rounded-xl overflow-hidden aspect-video bg-slate-200">
         <img src="../assets/hero-plumber.jpg" alt="Engineer" class="w-full h-full object-cover" loading="lazy" />
-        <span class="absolute top-2 left-2 bg-primary/80 text-white text-xs font-bold px-2 py-0.5 rounded uppercase">Draft</span>
+        <span class="absolute top-2 left-2 bg-primary-80 text-white text-xs font-bold px-2 py-0.5 rounded uppercase">Draft</span>
       </figure>
       <figure class="relative rounded-xl overflow-hidden aspect-video bg-slate-200">
         <img src="../assets/gallery-bath.jpg" alt="Bathroom" class="w-full h-full object-cover" loading="lazy" />
-        <span class="absolute top-2 left-2 bg-primary/80 text-white text-xs font-bold px-2 py-0.5 rounded uppercase">Draft</span>
+        <span class="absolute top-2 left-2 bg-primary-80 text-white text-xs font-bold px-2 py-0.5 rounded uppercase">Draft</span>
       </figure>
       <figure class="relative rounded-xl overflow-hidden aspect-video bg-slate-200">
         <img src="../assets/gallery-pipes.jpg" alt="Pipes" class="w-full h-full object-cover" loading="lazy" />
-        <span class="absolute top-2 left-2 bg-primary/80 text-white text-xs font-bold px-2 py-0.5 rounded uppercase">Draft</span>
+        <span class="absolute top-2 left-2 bg-primary-80 text-white text-xs font-bold px-2 py-0.5 rounded uppercase">Draft</span>
       </figure>
       <figure class="relative rounded-xl overflow-hidden aspect-video bg-slate-200">
         <img src="../assets/gallery-van.jpg" alt="Van" class="w-full h-full object-cover" loading="lazy" />
-        <span class="absolute top-2 left-2 bg-primary/80 text-white text-xs font-bold px-2 py-0.5 rounded uppercase">Draft</span>
+        <span class="absolute top-2 left-2 bg-primary-80 text-white text-xs font-bold px-2 py-0.5 rounded uppercase">Draft</span>
       </figure>
       <figure class="relative rounded-xl overflow-hidden aspect-video bg-slate-200">
         <img src="../assets/gallery-tools.jpg" alt="Tools" class="w-full h-full object-cover" loading="lazy" />
-        <span class="absolute top-2 left-2 bg-primary/80 text-white text-xs font-bold px-2 py-0.5 rounded uppercase">Draft</span>
+        <span class="absolute top-2 left-2 bg-primary-80 text-white text-xs font-bold px-2 py-0.5 rounded uppercase">Draft</span>
       </figure>
     </div>
   </section>
@@ -267,7 +291,7 @@
       <i data-lucide="map-pin" class="w-8 h-8 text-accent mx-auto mb-3"></i>
       <h2 class="text-2xl font-extrabold mb-2">Areas We Cover</h2>
       <p class="text-gray-300 mb-4 max-w-xl mx-auto">Reading, Caversham, Tilehurst, Woodley, Earley, Wokingham & surrounding Berkshire.</p>
-      <p class="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-2 text-sm font-semibold">
+      <p class="inline-flex items-center gap-2 bg-white-10 border border-white-20 rounded-full px-4 py-2 text-sm font-semibold">
         <i data-lucide="navigation" class="w-4 h-4 text-amber-400"></i>
         Typically within a <strong class="text-amber-300">15-mile radius</strong> of Reading
       </p>
@@ -282,11 +306,11 @@
   </footer>
 
   <!-- 7) Fixed mobile bottom bar -->
-  <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur border-t border-white/10 px-3 py-2.5 flex gap-2" style="padding-bottom: calc(0.625rem + env(safe-area-inset-bottom));">
-    <a href="tel:+441180000000" class="flex-1 btn-accent font-extrabold text-center py-3 rounded-xl text-sm inline-flex items-center justify-center gap-1.5">
+  <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-primary-95 backdrop-blur border-t border-white-20 px-3 py-2.5 flex gap-2" style="padding-bottom: calc(0.625rem + env(safe-area-inset-bottom));">
+    <a href="tel:+441180000000" class="flex-1 btn-accent text-slate-900 font-extrabold text-center py-3 rounded-xl text-sm inline-flex items-center justify-center gap-1.5">
       <i data-lucide="phone" class="w-4 h-4"></i> Call
     </a>
-    <a href="#contact" class="flex-1 border-2 border-white/80 text-white font-extrabold text-center py-3 rounded-xl text-sm inline-flex items-center justify-center gap-1.5">
+    <a href="#contact" class="flex-1 btn-on-dark font-extrabold text-center py-3 rounded-xl text-sm inline-flex items-center justify-center gap-1.5">
       <i data-lucide="message-square" class="w-4 h-4"></i> Request Quote
     </a>
   </div>
