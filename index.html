@@ -3,46 +3,38 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Spec-Site T1 Presence — NewCo preview demos</title>
+  <title>Spec-Site T1 Presence — NewCo CRO preview demos</title>
   <meta name="robots" content="noindex,nofollow" />
-  <meta name="description" content="Proposed Spec-Site T1 Presence mockups for Oxon/Berks plumbers. Not live customer sites. Not Google-affiliated. £179 publish + handover." />
-  <style>
-    body{font-family:system-ui,sans-serif;max-width:720px;margin:2rem auto;padding:0 1rem;line-height:1.55;color:#0f172a;background:#f8fafc}
-    .banner{background:#fef3c7;color:#92400e;padding:.75rem 1rem;border-radius:8px;font-weight:600;border:1px solid #f59e0b}
-    h1{font-size:1.55rem;margin:1.25rem 0 .5rem}
-    a{color:#0369a1}
-    .price{color:#15803d;font-weight:600}
-    .muted{color:#64748b;font-size:.92rem}
-    .cards{display:grid;gap:.85rem;margin:1.25rem 0}
-    .card{background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:1rem 1.1rem;display:grid;grid-template-columns:120px 1fr;gap:1rem;align-items:center}
-    .card img{width:120px;height:80px;object-fit:cover;border-radius:10px}
-    @media(max-width:520px){.card{grid-template-columns:1fr}}
-    code{font-size:.85em;background:#e2e8f0;padding:.1em .35em;border-radius:4px}
-  </style>
+  <meta name="description" content="Proposed Spec-Site T1 Presence CRO mockups for Oxon/Berks plumbers. Not live customer sites. Not Google-affiliated. £179 publish + handover." />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
 </head>
-<body>
-  <p class="banner">Proposed mockups — <strong>not</strong> live customer sites · <strong>not</strong> Google-affiliated · NewCo Spec-Site preview</p>
-  <h1>Spec-Site · T1 Presence demos</h1>
-  <p>Week-1 niche: Oxfordshire + Berkshire domestic plumbers / heating-plumbers.</p>
-  <p class="price">T1 Presence: £179 publish · handover to their domain + edit access</p>
-  <p class="muted">Polished trade layout: hero, trust bar, service cards, photo gallery with <strong>draft stock</strong>, sticky call. <strong>Unlimited photo intake</strong> — we curate for web; full catalog archived in customer Drive. Logo = text/mark lockup until customer file.</p>
-  <p class="muted">T2 Book &amp; Pay (Cal.com / Stripe under customer accounts) is an upgrade — <strong>not</strong> in these demos. Stack lock: <code>SPEC_SITE_STACK_LOCK_V1.md</code>.</p>
-  <div class="cards">
-    <a class="card" href="demos/demo-acme-plumbing-oxford.html" style="text-decoration:none;color:inherit">
-      <img src="assets/hero-plumber.jpg" alt="" />
-      <div>
-        <strong>Acme Plumbing Oxford</strong>
-        <div class="muted">Oxfordshire · plumber / heating</div>
-      </div>
-    </a>
-    <a class="card" href="demos/demo-thames-heating-reading.html" style="text-decoration:none;color:inherit">
-      <img src="assets/gallery-boiler.jpg" alt="" />
-      <div>
-        <strong>Thames Heating &amp; Plumbing</strong>
-        <div class="muted">Reading, Berkshire · heating-plumber</div>
-      </div>
-    </a>
+<body class="font-sans bg-gray-50 text-slate-800 antialiased">
+  <div class="bg-yellow-100 border-b border-yellow-500 text-yellow-900 text-center text-sm font-semibold px-4 py-2.5">
+    Proposed mockups — <strong>not</strong> live customer sites · <strong>not</strong> Google-affiliated · NewCo Spec-Site CRO preview
   </div>
-  <p class="muted">Source templates: NewCo ops <code>ops/spec_site/</code>. Honest banner on every demo until paid publish.</p>
+  <main class="max-w-2xl mx-auto px-4 py-10">
+    <h1 class="text-2xl md:text-3xl font-extrabold text-slate-900 mb-2">Spec-Site · T1 Presence CRO demos</h1>
+    <p class="text-slate-600 mb-1">Week-1 niche: Oxfordshire + Berkshire domestic plumbers / heating-plumbers.</p>
+    <p class="text-green-700 font-semibold mb-4">T1 Presence: £179 publish · handover to their domain + edit access</p>
+    <p class="text-sm text-slate-500 mb-2">CRO Design System: Tailwind 2.2.19 CDN + Lucide · slate/amber · emergency bar · hero lead form · trust · Google proof · services · gallery · coverage · sticky mobile CTAs.</p>
+    <p class="text-sm text-slate-500 mb-6">Unlimited photo intake — draft stock until customer assets. <strong>No</strong> Cal.com / Stripe widgets (T2 upgrade only).</p>
+    <div class="space-y-3">
+      <a href="demos/demo-acme-plumbing-oxford.html" class="flex gap-4 items-center bg-white border border-slate-200 rounded-2xl p-3 hover:shadow-md transition no-underline text-inherit">
+        <img src="assets/hero-plumber.jpg" alt="" class="w-28 h-20 object-cover rounded-xl flex-shrink-0" />
+        <div>
+          <strong class="text-slate-900 block">Acme Plumbing Oxford</strong>
+          <span class="text-sm text-slate-500">Oxfordshire · plumber · 4.9 ★ · 47 reviews</span>
+        </div>
+      </a>
+      <a href="demos/demo-thames-heating-reading.html" class="flex gap-4 items-center bg-white border border-slate-200 rounded-2xl p-3 hover:shadow-md transition no-underline text-inherit">
+        <img src="assets/gallery-boiler.jpg" alt="" class="w-28 h-20 object-cover rounded-xl flex-shrink-0" />
+        <div>
+          <strong class="text-slate-900 block">Thames Heating &amp; Plumbing</strong>
+          <span class="text-sm text-slate-500">Reading, Berkshire · heating-plumber · 4.9 ★ · 63 reviews</span>
+        </div>
+      </a>
+    </div>
+    <p class="text-xs text-slate-400 mt-8">Source: ops/spec_site/mockup · Design System CRO V1 · Honest banner on every demo until paid publish.</p>
+  </main>
 </body>
 </html>
