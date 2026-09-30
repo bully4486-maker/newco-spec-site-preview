@@ -4,6 +4,8 @@ Public static preview of **NewCo Spec-Site T1 Presence** mockups (Oxon + Berks p
 
 - **Not** live customer sites · **not** Google-affiliated
 - Product: T1 Presence **£179** — full handover to their domain
-- T2 booking/pay widgets intentionally absent
+- Photos: unlimited intake; we curate for web; full archive in customer Drive
+- T2 booking/pay widgets intentionally absent (Cal.com + Stripe Payment Links are T2 only)
+- Stack lock: `ops/SPEC_SITE_STACK_LOCK_V1.md`
 
 GitHub Pages serves this repo. Branded `preview.newcopacks.co.uk` needs CF/DNS later.
