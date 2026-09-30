@@ -1,11 +1,12 @@
 # newco-spec-site-preview
 
-Public host for **Spec-Site T1 Presence** CRO mockups (NewCo).
+Public GitHub Pages origin for Spec-Site T1 Presence CRO demos (Oxon/Berks plumbers & heating).
 
-- **Intended demo URL:** `https://preview.newcopacks.co.uk/{trade}-{town}-{slug}/` (or interim `https://{slug}.newcopacks.co.uk`)
-- Temporary origin until Keith connects DNS: GitHub Pages
-- Not live customer sites · not Google-affiliated · visible DRAFT banner
-- Design: Tailwind CSS 2.2.19 CDN + Lucide · slate/amber CRO system
-- SKU: T1 Presence £179 · no Cal.com / Stripe widgets
+- **Temporary origin:** https://bully4486-maker.github.io/newco-spec-site-preview/
+- **Intended branded host:** `https://preview.newcopacks.co.uk/{trade}-{town}-{slug}/`
+- **Keith DNS clicks (Option C):** `ops/spec_site/KEITH_PREVIEW_DNS_CLICKS.md` (in newco-packs)
+- **10 demos:** `/demos/demo-*.html` and matching `/{trade}-{town}-{slug}/index.html`
+- Visible **DRAFT** banner + amber/navy CTA contrast on every page
+- `robots.txt` Disallow-all · meta `noindex`
 
-DNS steps: `ops/spec_site/BRANDED_PREVIEW_DNS.md` (in newco-packs / ops tree).
+Demo phones are fake placeholders. Not live customer sites. Not Google-affiliated.
