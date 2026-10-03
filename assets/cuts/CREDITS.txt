@@ -1,0 +1,26 @@
+Example cuts used on every barber demo. Not photographs of these shops.
+Wikimedia Commons downloads returned HTTP 429, so these are Pexels files (saved locally, not hotlinked).
+
+fade.jpg
+Shows: a fade, finished with a razor
+Author: Izzet Çakallı
+License: Pexels License (free to use)
+Source: https://www.pexels.com/photo/a-barber-using-a-razor-blade-12464841/
+
+scissor-cut.jpg
+Shows: a scissor cut (scissors and comb)
+Author: cottonbro studio
+License: Pexels License (free to use)
+Source: https://www.pexels.com/photo/a-person-holding-scissors-and-green-comb-7253877/
+
+beard.jpg
+Shows: a beard trim
+Author: Gustavo Fring
+License: Pexels License (free to use)
+Source: https://www.pexels.com/photo/barber-trimming-beard-7447145/
+
+chair-cut.jpg
+Shows: a haircut in the chair
+Author: cottonbro studio
+License: Pexels License (free to use)
+Source: https://www.pexels.com/photo/photo-of-a-barber-giving-a-haircut-3998397/
