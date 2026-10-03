@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Cox &amp; Co Barbershop — Barber in Stonehaven</title>
-  <meta name="description" content="Cox &amp; Co Barbershop — Barber serving Stonehaven. Enquire by email." />
+  <meta name="description" content="Cox &amp; Co Barbershop — Barber serving Stonehaven." />
   <meta name="robots" content="noindex,nofollow" />
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/lucide@0.460.0/dist/umd/lucide.min.js"></script>
@@ -101,6 +101,7 @@
             <i data-lucide="mail" class="w-5 h-5"></i> Enquire
           </a>
           
+          <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Cox+%26+Co+Barbershop+Unit+2+Greenlaw+Rd%2C+Chapelton+of+Elsick%2C+Stonehaven+AB39+8BS&amp;destination_place_id=ChIJW7q1s-wbhEgRR4VGa_Ipm5Q" class="btn-on-dark font-bold px-6 py-3 rounded-full inline-flex items-center gap-2 transition" rel="noopener noreferrer" target="_blank"><i data-lucide="navigation" class="w-5 h-5"></i> Directions</a>
         </div>
       </div>
       <!-- Right: Quick Lead Form -->
@@ -142,12 +143,13 @@
   </section>
 
   <!-- 4) Reviews / social proof (filled by factory; lead_kind aware) -->
-    <section class="max-w-6xl mx-auto px-4 py-12">
-    <div class="text-center mb-4">
-      
-      <h2 class="text-2xl font-extrabold text-primary">Trusted locally</h2>
-      <p class="text-sm text-slate-500 mt-1">Trusted by local customers · reviews on request</p>
-      <p class="text-sm text-slate-500 mt-4">Reviews available on request · we do not invent Google quotes on real-business drafts.</p>
+    <section class="max-w-6xl mx-auto px-4 py-12" aria-label="Google rating">
+    <div class="text-center">
+      <div class="inline-flex items-center gap-2 bg-white border border-slate-200 rounded-full px-4 py-2 shadow-sm">
+        <strong class="text-primary text-lg">5</strong>
+        <span class="text-slate-500 text-sm">· 124 Google reviews</span>
+      </div>
+      <p class="mt-3"><a href="https://www.google.com/maps/search/?api=1&amp;query=Cox+%26+Co+Barbershop&amp;query_place_id=ChIJW7q1s-wbhEgRR4VGa_Ipm5Q" class="text-sm font-bold text-accent hover:underline" rel="noopener noreferrer" target="_blank">See reviews on Google</a></p>
     </div>
   </section>
 
@@ -252,12 +254,9 @@
     <p class="text-slate-500">Cox &amp; Co Barbershop · Stonehaven</p>
   </footer>
 
-  <!-- 7) Fixed mobile bottom bar -->
-  <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-primary-95 backdrop-blur border-t border-white-20 px-3 py-2.5 flex gap-2" style="padding-bottom: calc(0.625rem + env(safe-area-inset-bottom));">
-    
-    <a href="mailto:contact@coxandcobarbershop.co.uk?subject=Enquiry%20%E2%80%94%20Cox &amp; Co Barbershop" class="flex-1 btn-on-dark font-extrabold text-center py-3 rounded-xl text-sm inline-flex items-center justify-center gap-1.5">
-      <i data-lucide="mail" class="w-4 h-4"></i> Enquire
-    </a>
+  <!-- 7) Single sticky mobile bar: Call and/or Directions (never a second bar) -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-primary-95 backdrop-blur border-t border-white-20 px-3 py-2.5 flex gap-2" style="padding-bottom: calc(0.625rem + env(safe-area-inset-bottom));" data-sticky-bar="call-directions">
+    <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Cox+%26+Co+Barbershop+Unit+2+Greenlaw+Rd%2C+Chapelton+of+Elsick%2C+Stonehaven+AB39+8BS&amp;destination_place_id=ChIJW7q1s-wbhEgRR4VGa_Ipm5Q" class="flex-1 btn-on-dark font-extrabold text-center py-3 rounded-xl text-sm inline-flex items-center justify-center gap-1.5" rel="noopener noreferrer" target="_blank"><i data-lucide="navigation" class="w-4 h-4"></i> Directions</a>
   </div>
 
   <script>lucide.createIcons();</script>
