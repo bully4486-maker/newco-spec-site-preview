@@ -86,9 +86,15 @@
     .muted { color: #5C534A; }
     a { color: #1C1917; }
     a:focus-visible { outline: 2px solid #1C1917; outline-offset: 2px; }
+    .hero-photo {
+      width: 100%;
+      height: 100svh;
+      min-height: 100vh;
+      object-fit: cover;
+      display: block;
+    }
     .cuts { padding-top: 8px; }
     .cuts h2 { margin-top: 1.25rem; }
-    .cuts .disclaimer { margin: 0 0 12px; color: #5C534A; }
     .cuts-scroll {
       display: flex;
       gap: 10px;
@@ -110,11 +116,6 @@
       display: block;
       border-radius: 12px;
       background: #E6E0D6;
-    }
-    .cuts-scroll figcaption {
-      margin-top: 6px;
-      color: #5C534A;
-      font-size: 0.875rem;
     }
     .services-band {
       background: #8C1C1C;
@@ -252,7 +253,8 @@
     }
   </style>
 </head>
-<body class="has-bar" data-template="shop-v3">
+<body class="has-bar" data-template="shop-v4">
+  <img class="hero-photo" src="/assets/cuts/chair-cut.jpg" alt="A haircut in the chair" />
   <header class="shop-head">
     <div class="lockup">
       <h1>Cox &amp; Co Barbershop</h1>
@@ -264,24 +266,16 @@
   <section class="cuts" aria-label="Cuts">
     <div class="wrap">
       <h2>Cuts</h2>
-      <p class="disclaimer">Example cuts, not this shop’s work.</p>
     </div>
     <div class="cuts-scroll">
       <figure>
-        <img src="/assets/cuts/fade.jpg" alt="Example cut, not this shop’s work: a fade" />
-        <figcaption>Example cut</figcaption>
+        <img src="/assets/cuts/fade.jpg" alt="A fade" />
       </figure>
       <figure>
-        <img src="/assets/cuts/scissor-cut.jpg" alt="Example cut, not this shop’s work: a scissor cut" />
-        <figcaption>Example cut</figcaption>
+        <img src="/assets/cuts/scissor-cut.jpg" alt="A scissor cut" />
       </figure>
       <figure>
-        <img src="/assets/cuts/beard.jpg" alt="Example cut, not this shop’s work: a beard trim" />
-        <figcaption>Example cut</figcaption>
-      </figure>
-      <figure>
-        <img src="/assets/cuts/chair-cut.jpg" alt="Example cut, not this shop’s work: a haircut" />
-        <figcaption>Example cut</figcaption>
+        <img src="/assets/cuts/beard.jpg" alt="A beard trim" />
       </figure>
     </div>
   </section>
