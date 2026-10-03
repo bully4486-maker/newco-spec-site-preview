@@ -26,37 +26,118 @@
       line-height: 1.5;
     }
     body.has-bar { padding-bottom: 80px; }
+    .shop-head {
+      background: #F7F4EF;
+      border-bottom: 1px solid #E6E0D6;
+    }
+    .lockup {
+      max-width: 40rem;
+      margin: 0 auto;
+      padding: 20px 16px 18px;
+    }
     main {
       max-width: 40rem;
       margin: 0 auto;
       padding: 16px;
     }
-    h1 { font-size: 1.75rem; line-height: 1.2; margin: 0 0 0.35rem; font-weight: 750; }
-    h2 { font-size: 1.25rem; margin: 2rem 0 0.75rem; font-weight: 700; }
+    h1 {
+      font-size: 2rem;
+      line-height: 1.15;
+      margin: 0;
+      font-weight: 700;
+      color: #1C1917;
+    }
+    .lede {
+      margin: 6px 0 0;
+      color: #5C534A;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      margin-top: 12px;
+      padding: 6px 10px;
+      border: 1px solid #E6E0D6;
+      color: #1C1917;
+      background: #F7F4EF;
+      font-weight: 700;
+      font-size: 0.875rem;
+      line-height: 1.2;
+      text-decoration: none;
+    }
+    a.badge { color: #1C1917; }
+    h2 {
+      font-size: 1.35rem;
+      margin: 2.25rem 0 0.85rem;
+      font-weight: 700;
+      color: #1C1917;
+    }
     p { margin: 0.35rem 0; }
     .muted { color: #5C534A; }
     a { color: #1C1917; }
     a:focus-visible { outline: 2px solid #1C1917; outline-offset: 2px; }
-    .rating { font-weight: 700; margin-top: 0.75rem; }
-    .svc, .hours { list-style: none; margin: 0; padding: 0; }
-    .svc li, .hours li {
+    .svc { list-style: none; margin: 0; padding: 0; }
+    .svc li {
+      list-style: none;
+      background: #FFFCF8;
+      border: 1px solid #E6E0D6;
+      padding: 14px 16px;
+      margin: 0 0 8px;
       display: flex;
       justify-content: space-between;
+      align-items: flex-start;
       gap: 16px;
-      padding: 12px 0;
+    }
+    .svc-copy { display: block; min-width: 0; }
+    .svc .name { display: block; font-weight: 700; color: #1C1917; }
+    .svc .note {
+      display: block;
+      margin-top: 2px;
+      color: #5C534A;
+      font-size: 0.875rem;
+      font-weight: 400;
+    }
+    .svc .price {
+      color: #1C1917;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .addr { margin: 0 0 12px; color: #1C1917; }
+    .hours {
+      list-style: none;
+      margin: 0 0 0;
+      padding: 0;
+      border: 1px solid #E6E0D6;
+    }
+    .hours li {
+      list-style: none;
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+      margin: 0;
+      padding: 10px 14px;
       border-bottom: 1px solid #E6E0D6;
     }
-    .svc .price, .hours .when { font-weight: 650; white-space: nowrap; }
-    .addr { margin-top: 0.25rem; }
+    .hours li:last-child { border-bottom: 0; }
+    .hours .day {
+      font-weight: 700;
+      width: 7.5rem;
+      flex: 0 0 7.5rem;
+      color: #1C1917;
+    }
+    .hours .when { color: #1C1917; }
+    .hours-line { margin: 0; color: #1C1917; }
     .map {
       margin-top: 16px;
+      width: 100%;
       height: 360px;
       border: 1px solid #E6E0D6;
       background: #F7F4EF;
     }
     .map iframe { border: 0; width: 100%; height: 360px; display: block; }
-    .enquire { margin-top: 1.5rem; }
-    .enquire a { font-weight: 700; }
+    .visit-dir { margin: 12px 0 0; }
+    .visit-dir a { color: #1C1917; font-weight: 400; }
+    .enquire { margin: 1.5rem 0 0; }
+    .enquire a { color: #1C1917; font-weight: 400; }
     footer {
       max-width: 40rem;
       margin: 0 auto;
@@ -64,6 +145,7 @@
       color: #5C534A;
       font-size: 0.875rem;
     }
+    footer p { margin: 0; }
     .bar {
       position: fixed;
       left: 0;
@@ -99,38 +181,40 @@
     }
   </style>
 </head>
-<body class="has-bar">
-  <main>
-    <header>
+<body class="has-bar" data-template="shop-v2">
+  <header class="shop-head">
+    <div class="lockup">
       <h1>Kamo Barbers</h1>
-      <p class="muted">Barber in Gateshead</p>
-      <p class="rating">4.9 · 223 Google reviews</p>
-      <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Kamo+Barbers&amp;query_place_id=ChIJ38r-9O95fkgRXfENOe07Oio" rel="noopener noreferrer" target="_blank">See reviews on Google</a></p>
-    </header>
+      <p class="lede">Barber in Gateshead</p>
+      <a class="badge" href="https://www.google.com/maps/search/?api=1&amp;query=Kamo+Barbers&amp;query_place_id=ChIJ38r-9O95fkgRXfENOe07Oio" rel="noopener noreferrer" target="_blank">4.9 · 223 · Google</a>
+    </div>
+  </header>
+  <main>
     <section aria-label="Services">
       <h2>Services</h2>
       <ul class="svc">
-      <li><span>Haircut</span><span class="price">from £16</span></li>
-      <li><span>Skin Fade</span><span class="price">from £19</span></li>
-      <li><span>Beard Trim</span><span class="price">£11</span></li>
-      <li><span>Hot Towel</span><span class="price">from £8</span></li>
+      <li><span class="svc-copy"><span class="name">Haircut</span><span class="note">Quality grooming cuts.</span></span><span class="price">from £16</span></li>
+      <li><span class="svc-copy"><span class="name">Skin Fade</span><span class="note">Sharp fades.</span></span><span class="price">from £19</span></li>
+      <li><span class="svc-copy"><span class="name">Beard Trim</span><span class="note">Beard shape-up.</span></span><span class="price">£11</span></li>
+      <li><span class="svc-copy"><span class="name">Hot Towel</span><span class="note">Finishing extras (confirm in shop).</span></span><span class="price">from £8</span></li>
     </ul>
     </section>
         <section aria-label="Visit">
       <h2>Visit</h2>
       <p class="addr">92 Glebe Terrace, Dunston, Gateshead NE11 9NQ</p>
           <ul class="hours">
-        <li><span>Monday</span><span class="when">10 AM–7 PM</span></li>
-        <li><span>Tuesday</span><span class="when">10 AM–7 PM</span></li>
-        <li><span>Wednesday</span><span class="when">10 AM–7 PM</span></li>
-        <li><span>Thursday</span><span class="when">10 AM–7 PM</span></li>
-        <li><span>Friday</span><span class="when">10 AM–7 PM</span></li>
-        <li><span>Saturday</span><span class="when">10 AM–6 PM</span></li>
-        <li><span>Sunday</span><span class="when">10 AM–4 PM</span></li>
+        <li><span class="day">Monday</span><span class="when">10 AM–7 PM</span></li>
+        <li><span class="day">Tuesday</span><span class="when">10 AM–7 PM</span></li>
+        <li><span class="day">Wednesday</span><span class="when">10 AM–7 PM</span></li>
+        <li><span class="day">Thursday</span><span class="when">10 AM–7 PM</span></li>
+        <li><span class="day">Friday</span><span class="when">10 AM–7 PM</span></li>
+        <li><span class="day">Saturday</span><span class="when">10 AM–6 PM</span></li>
+        <li><span class="day">Sunday</span><span class="when">10 AM–4 PM</span></li>
     </ul>
     <div class="map">
       <iframe title="Map" src="https://maps.google.com/maps?q=Kamo+Barbers%2C+92+Glebe+Terrace%2C+Dunston%2C+Gateshead+NE11+9NQ&amp;z=16&amp;output=embed" width="100%" height="360" style="border:0;width:100%;height:360px;display:block" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
     </div>
+      <p class="visit-dir"><a href="https://maps.google.com/?q=Kamo+Barbers%2C+92+Glebe+Terrace%2C+Dunston%2C+Gateshead+NE11+9NQ" rel="noopener noreferrer" target="_blank">Directions</a></p>
     </section>
     <p class="enquire"><a href="mailto:info@kamobarbers.co.uk?subject=Enquiry+%E2%80%94+Kamo+Barbers">Enquire</a></p>
   </main>
