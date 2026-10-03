@@ -4,253 +4,128 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Wokingham Plumb Fix — Plumber in Wokingham</title>
-  <meta name="description" content="Wokingham Plumb Fix — Plumber serving Wokingham. Call 0118 0000100." />
+  <meta name="description" content="Wokingham Plumb Fix — Plumber in Wokingham." />
   <meta name="robots" content="noindex,nofollow" />
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-  <script src="https://cdn.jsdelivr.net/npm/lucide@0.460.0/dist/umd/lucide.min.js"></script>
   <style>
     :root {
-      --primary: #0F172A;
-      --accent: #F59E0B;
-      --accent-hover: #D97706;
-      --light: #F8FAFC;
-      --text: #1E293B;
+      --paper: #F7F4EF;
+      --ink: #1C1917;
+      --muted: #5C534A;
+      --line: #E6E0D6;
+      --accent: #8C1C1C;
+      --on-accent: #FFFFFF;
     }
-    body { font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; color: var(--text); background: var(--light); }
-    .bg-primary { background-color: var(--primary); }
-    .bg-accent { background-color: var(--accent); }
-    .hover\:bg-accent-hover:hover { background-color: var(--accent-hover); }
-    .text-primary { color: var(--primary); }
-    .text-accent { color: var(--accent); }
-    .bg-emergency { background: linear-gradient(90deg, #7f1d1d 0%, #0F172A 100%); }
-    /* TW 2.2.19 polyfill: slate/amber + opacity not in CDN build */
-    .text-slate-900 { color: #0f172a !important; }
-    .text-slate-800 { color: #1e293b !important; }
-    .text-slate-700 { color: #334155 !important; }
-    .text-slate-600 { color: #475569 !important; }
-    .text-slate-500 { color: #64748b !important; }
-    .text-slate-400 { color: #94a3b8 !important; }
-    .bg-slate-50 { background-color: #f8fafc !important; }
-    .bg-slate-200 { background-color: #e2e8f0 !important; }
-    .bg-slate-900 { background-color: #0f172a !important; }
-    .border-slate-200 { border-color: #e2e8f0 !important; }
-    .text-amber-300 { color: #fcd34d !important; }
-    .text-amber-400 { color: #fbbf24 !important; }
-    .bg-primary-80 { background-color: rgba(15, 23, 42, 0.85) !important; }
-    .bg-primary-95 { background-color: rgba(15, 23, 42, 0.95) !important; }
-    .bg-white-10 { background-color: rgba(255, 255, 255, 0.1) !important; }
-    .border-white-20 { border-color: rgba(255, 255, 255, 0.2) !important; }
-    /* CTAs — never white-on-white; dark text on amber, filled secondary */
-    .btn-accent { background-color: var(--accent) !important; color: #0F172A !important; }
-    .btn-accent:hover { background-color: var(--accent-hover) !important; color: #0F172A !important; }
-    .btn-on-dark { background-color: #ffffff !important; color: #0F172A !important; border: 2px solid #ffffff !important; }
-    .btn-on-dark:hover { background-color: var(--accent) !important; color: #0F172A !important; border-color: var(--accent) !important; }
-    .btn-navy { background-color: var(--primary) !important; color: #ffffff !important; }
-    .btn-navy:hover { background-color: #1e293b !important; color: #ffffff !important; }
-    html { scroll-behavior: smooth; }
+    * { box-sizing: border-box; }
+    html { background: #F7F4EF; }
+    body {
+      margin: 0;
+      background: #F7F4EF;
+      color: #1C1917;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    body.has-bar { padding-bottom: 80px; }
+    main {
+      max-width: 40rem;
+      margin: 0 auto;
+      padding: 16px;
+    }
+    h1 { font-size: 1.75rem; line-height: 1.2; margin: 0 0 0.35rem; font-weight: 750; }
+    h2 { font-size: 1.25rem; margin: 2rem 0 0.75rem; font-weight: 700; }
+    p { margin: 0.35rem 0; }
+    .muted { color: #5C534A; }
+    a { color: #1C1917; }
+    a:focus-visible { outline: 2px solid #1C1917; outline-offset: 2px; }
+    .rating { font-weight: 700; margin-top: 0.75rem; }
+    .svc, .hours { list-style: none; margin: 0; padding: 0; }
+    .svc li, .hours li {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 12px 0;
+      border-bottom: 1px solid #E6E0D6;
+    }
+    .svc .price, .hours .when { font-weight: 650; white-space: nowrap; }
+    .addr { margin-top: 0.25rem; }
+    .map {
+      margin-top: 16px;
+      height: 360px;
+      border: 1px solid #E6E0D6;
+      background: #F7F4EF;
+    }
+    .map iframe { border: 0; width: 100%; height: 360px; display: block; }
+    .enquire { margin-top: 1.5rem; }
+    .enquire a { font-weight: 700; }
+    footer {
+      max-width: 40rem;
+      margin: 0 auto;
+      padding: 8px 16px 24px;
+      color: #5C534A;
+      font-size: 0.875rem;
+    }
+    .bar {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 50;
+      display: flex;
+      gap: 8px;
+      padding: 8px 16px calc(8px + env(safe-area-inset-bottom));
+      background: #F7F4EF;
+      border-top: 1px solid #E6E0D6;
+    }
+    .bar a {
+      flex: 1;
+      min-height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 8px 12px;
+    }
+    .bar a.call { background: #8C1C1C; color: #FFFFFF; }
+    .bar a.directions {
+      background: #F7F4EF;
+      color: #1C1917;
+      border: 1px solid #1C1917;
+    }
+    @media (max-height: 499px) {
+      body.has-bar { padding-bottom: 0; }
+      .bar { position: static; }
+    }
   </style>
 </head>
-<body class="font-sans antialiased pb-20 md:pb-0">
-<!-- 1) Emergency top bar -->
-  <div class="bg-primary text-white text-sm md:text-base">
-    <div class="max-w-6xl mx-auto px-4 py-2.5 flex flex-col sm:flex-row items-center justify-between gap-2">
-      <p class="font-bold text-center sm:text-left">
-        <i data-lucide="alert-triangle" class="inline w-4 h-4 mr-1 align-text-bottom"></i>
-        24/7 Emergency Call-Out Across Wokingham
-        <span class="hidden sm:inline text-gray-300 mx-2">|</span>
-        <span class="block sm:inline font-semibold text-amber-300">Fast 30-Min Arrival</span>
-      </p>
-      <a href="tel:+441180000100" class="inline-flex items-center gap-1.5 bg-accent hover:bg-accent-hover text-slate-900 font-bold px-4 py-1.5 rounded-full text-sm transition"><i data-lucide="phone" class="w-4 h-4"></i> 0118 0000100</a>
-    </div>
-  </div>
-
-  <!-- 2) Nav + Hero -->
-  <nav class="bg-primary text-white sticky top-0 z-40 shadow-lg">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-3 flex-wrap">
-      <div class="flex items-center gap-3">
-        <div class="w-11 h-11 rounded-xl bg-accent flex items-center justify-center font-extrabold text-primary text-sm tracking-tight shadow" aria-label="Logo slot">
-          WP
-        </div>
-        <div>
-          <div class="font-bold text-base leading-tight">Wokingham Plumb Fix</div>
-          <div class="flex items-center gap-1.5 text-xs text-gray-300 mt-0.5"><span>Proposed presence · draft only</span></div>
-        </div>
-      </div>
-      <a href="tel:+441180000100" class="btn-accent text-slate-900 font-bold px-5 py-2.5 rounded-full text-sm inline-flex items-center gap-1.5 transition"><i data-lucide="phone-call" class="w-4 h-4"></i> Call Now</a>
-    </div>
-  </nav>
-
-  <section class="bg-primary text-white">
-    <div class="max-w-6xl mx-auto px-4 py-10 md:py-14 grid md:grid-cols-2 gap-10 items-center">
-      <!-- Left: headline -->
-      <div>
-        <p class="text-amber-400 text-xs font-bold uppercase tracking-wider mb-3">Plumber · Wokingham</p>
-        <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-4">
-          Trusted Plumber in Wokingham — Fast, Fixed &amp; Local
-        </h1>
-        <p class="text-gray-300 text-lg mb-6 max-w-lg">
-          Same-day jobs when diary allows. Honest fixed quotes. No call-out fee on booked work.
-        </p>
-        <ul class="space-y-2.5 mb-8">
-          <li class="flex items-center gap-2.5 font-semibold"><i data-lucide="check-circle" class="w-5 h-5 text-amber-400 flex-shrink-0"></i> No Call-Out Fee</li>
-          <li class="flex items-center gap-2.5 font-semibold"><i data-lucide="check-circle" class="w-5 h-5 text-amber-400 flex-shrink-0"></i> Fixed Quotes</li>
-          <li class="flex items-center gap-2.5 font-semibold"><i data-lucide="check-circle" class="w-5 h-5 text-amber-400 flex-shrink-0"></i> Gas Safe</li>
-        </ul>
-        <div class="flex flex-wrap gap-3">
-          <a href="mailto:hello@wokinghamplumbfix.example?subject=Enquiry%20%E2%80%94%20Wokingham Plumb Fix" class="btn-accent text-slate-900 font-bold px-6 py-3 rounded-full inline-flex items-center gap-2 transition">
-            <i data-lucide="mail" class="w-5 h-5"></i> Enquire
-          </a>
-          <a href="tel:+441180000100" class="btn-on-dark font-bold px-6 py-3 rounded-full inline-flex items-center gap-2 transition"><i data-lucide="phone" class="w-5 h-5"></i> Call 0118 0000100</a>
-          
-        </div>
-      </div>
-      <!-- Right: Quick Lead Form -->
-            <div id="contact" class="bg-white text-slate-800 rounded-2xl shadow-2xl p-6 md:p-7" style="color:#1E293B;">
-        <h2 class="text-xl font-extrabold text-primary mb-1">Enquire</h2>
-        <p class="text-sm text-slate-500 mb-5">One easy step — tap below and we will get back to you.</p>
-        <a href="mailto:hello@wokinghamplumbfix.example?subject=Enquiry%20%E2%80%94%20Wokingham Plumb Fix" class="w-full btn-accent text-slate-900 font-extrabold py-3.5 rounded-xl text-sm transition inline-flex items-center justify-center gap-2 mb-3">
-          <i data-lucide="mail" class="w-4 h-4"></i> Enquire by email
-        </a>
-        <a href="tel:+441180000100" class="w-full btn-navy font-bold py-3 rounded-xl text-sm transition inline-flex items-center justify-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i> Or call 0118 0000100</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- 3) Trust bar -->
-  <section class="bg-white border-b border-slate-200" aria-label="Trust bar">
-    <div class="max-w-6xl mx-auto px-4 py-5 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-      <div class="flex flex-col items-center gap-1.5">
-        <i data-lucide="shield-check" class="w-7 h-7 text-accent"></i>
-        <strong class="text-sm text-primary">Gas Safe</strong>
-        <span class="text-xs text-slate-500">Registered engineer</span>
-      </div>
-      <div class="flex flex-col items-center gap-1.5">
-        <i data-lucide="umbrella" class="w-7 h-7 text-accent"></i>
-        <strong class="text-sm text-primary">£5M Insured</strong>
-        <span class="text-xs text-slate-500">Public liability</span>
-      </div>
-      <div class="flex flex-col items-center gap-1.5">
-        <i data-lucide="award" class="w-7 h-7 text-accent"></i>
-        <strong class="text-sm text-primary">City &amp; Guilds</strong>
-        <span class="text-xs text-slate-500">Qualified trades</span>
-      </div>
-      <div class="flex flex-col items-center gap-1.5">
-        <i data-lucide="banknote" class="w-7 h-7 text-accent"></i>
-        <strong class="text-sm text-primary">No Hidden Fees</strong>
-        <span class="text-xs text-slate-500">Fixed quotes upfront</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- 4) Reviews / social proof (filled by factory; lead_kind aware) -->
-  
-
-  <!-- 5) Services grid -->
-  <section class="bg-white border-y border-slate-200 py-12">
-    <div class="max-w-6xl mx-auto px-4">
-      <div class="text-center mb-8">
-        <h2 class="text-2xl font-extrabold text-primary">Our Services</h2>
-        <p class="text-slate-500 text-sm mt-1">Book a service — we’ll call you back fast</p>
-      </div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-        <div class="border border-slate-200 rounded-2xl p-5 hover:shadow-lg transition bg-slate-50">
-          <div class="w-11 h-11 rounded-xl bg-amber-100 flex items-center justify-center mb-3">
-            <i data-lucide="flame" class="w-5 h-5 text-accent"></i>
-          </div>
-          <h3 class="font-bold text-primary mb-1">Boiler Repair</h3>
-          <p class="text-sm font-extrabold text-accent mb-2">from £89</p>
-          <p class="text-sm text-slate-500 mb-4">Breakdowns, no-heat &amp; annual services.</p>
-          <a href="mailto:hello@wokinghamplumbfix.example?subject=Enquiry%20%E2%80%94%20Wokingham Plumb Fix" class="text-sm font-bold text-accent hover:underline inline-flex items-center gap-1">Enquire <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></a>
-        </div>
-        <div class="border border-slate-200 rounded-2xl p-5 hover:shadow-lg transition bg-slate-50">
-          <div class="w-11 h-11 rounded-xl bg-amber-100 flex items-center justify-center mb-3">
-            <i data-lucide="droplets" class="w-5 h-5 text-accent"></i>
-          </div>
-          <h3 class="font-bold text-primary mb-1">Leak Detection</h3>
-          <p class="text-sm font-extrabold text-accent mb-2">from £65</p>
-          <p class="text-sm text-slate-500 mb-4">Emergency leaks, taps &amp; pipework.</p>
-          <a href="mailto:hello@wokinghamplumbfix.example?subject=Enquiry%20%E2%80%94%20Wokingham Plumb Fix" class="text-sm font-bold text-accent hover:underline inline-flex items-center gap-1">Enquire <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></a>
-        </div>
-        <div class="border border-slate-200 rounded-2xl p-5 hover:shadow-lg transition bg-slate-50">
-          <div class="w-11 h-11 rounded-xl bg-amber-100 flex items-center justify-center mb-3">
-            <i data-lucide="bath" class="w-5 h-5 text-accent"></i>
-          </div>
-          <h3 class="font-bold text-primary mb-1">Bathrooms</h3>
-          <p class="text-sm font-extrabold text-accent mb-2">from £450</p>
-          <p class="text-sm text-slate-500 mb-4">Suites, showers &amp; full refits.</p>
-          <a href="mailto:hello@wokinghamplumbfix.example?subject=Enquiry%20%E2%80%94%20Wokingham Plumb Fix" class="text-sm font-bold text-accent hover:underline inline-flex items-center gap-1">Enquire <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></a>
-        </div>
-        <div class="border border-slate-200 rounded-2xl p-5 hover:shadow-lg transition bg-slate-50">
-          <div class="w-11 h-11 rounded-xl bg-amber-100 flex items-center justify-center mb-3">
-            <i data-lucide="wrench" class="w-5 h-5 text-accent"></i>
-          </div>
-          <h3 class="font-bold text-primary mb-1">Heating &amp; Radiators</h3>
-          <p class="text-sm font-extrabold text-accent mb-2">from £75</p>
-          <p class="text-sm text-slate-500 mb-4">Powerflush, thermostats &amp; installs.</p>
-          <a href="mailto:hello@wokinghamplumbfix.example?subject=Enquiry%20%E2%80%94%20Wokingham Plumb Fix" class="text-sm font-bold text-accent hover:underline inline-flex items-center gap-1">Enquire <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Logo + Photo gallery (kept — after services) -->
-  <section class="max-w-6xl mx-auto px-4 py-12" id="photos">
-    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-3 mb-6">
-      <div>
-        <h2 class="text-2xl font-extrabold text-primary">Our Work</h2>
-        <p class="text-sm text-slate-500 mt-1">Recent work from the van — your photos go here on publish.</p>
-      </div>
-      <div class="flex items-center gap-2 text-sm text-slate-500">
-        <div class="w-9 h-9 rounded-lg bg-primary text-amber-400 font-extrabold text-xs flex items-center justify-center">WP</div>
-        <span>Logo slot · customer file or text mark</span>
-      </div>
-    </div>
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
-      <figure class="relative rounded-xl overflow-hidden aspect-video bg-slate-200">
-        <img src="../assets/hero-plumber.jpg" alt="Trade at work" class="w-full h-full object-cover" loading="lazy" />
-</figure>
-      <figure class="relative rounded-xl overflow-hidden aspect-video bg-slate-200">
-        <img src="../assets/gallery-boiler.jpg" alt="Boiler / plant" class="w-full h-full object-cover" loading="lazy" />
-</figure>
-      <figure class="relative rounded-xl overflow-hidden aspect-video bg-slate-200">
-        <img src="../assets/gallery-bath.jpg" alt="Bathroom finish" class="w-full h-full object-cover" loading="lazy" />
-</figure>
-      <figure class="relative rounded-xl overflow-hidden aspect-video bg-slate-200">
-        <img src="../assets/gallery-pipes.jpg" alt="Pipework" class="w-full h-full object-cover" loading="lazy" />
-</figure>
-      <figure class="relative rounded-xl overflow-hidden aspect-video bg-slate-200">
-        <img src="../assets/gallery-tools.jpg" alt="Tools" class="w-full h-full object-cover" loading="lazy" />
-</figure>
-      <figure class="relative rounded-xl overflow-hidden aspect-video bg-slate-200">
-        <img src="../assets/gallery-van.jpg" alt="Van on call" class="w-full h-full object-cover" loading="lazy" />
-</figure>
-    </div>
-  </section>
-
-  <!-- 6) Local coverage -->
-  <section class="bg-primary text-white py-12">
-    <div class="max-w-6xl mx-auto px-4 text-center">
-      <i data-lucide="map-pin" class="w-8 h-8 text-accent mx-auto mb-3"></i>
-      <h2 class="text-2xl font-extrabold mb-2">Areas We Cover</h2>
-      <p class="text-gray-300 mb-4 max-w-xl mx-auto">Wokingham, Twyford, Finchampstead, Crowthorne &amp; East Berkshire.</p>
-      <p class="inline-flex items-center gap-2 bg-white-10 border border-white-20 rounded-full px-4 py-2 text-sm font-semibold">
-        <i data-lucide="navigation" class="w-4 h-4 text-amber-400"></i>
-        Typically within a <strong class="text-amber-300">15-mile radius</strong> of Wokingham
-      </p>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-slate-900 text-slate-400 text-center text-xs py-8 px-4">
-    <p class="mb-2"><strong class="text-white">Wokingham Plumb Fix</strong> · Plumber · Wokingham</p>
-    <p class="text-slate-500">Wokingham Plumb Fix · Wokingham</p>
+<body class="has-bar">
+  <main>
+    <header>
+      <h1>Wokingham Plumb Fix</h1>
+      <p class="muted">Plumber in Wokingham</p>
+      
+    </header>
+    <section aria-label="Services">
+      <h2>Services</h2>
+      <ul class="svc">
+      <li><span>Boiler Repair</span><span class="price">from £89</span></li>
+      <li><span>Leak Detection</span><span class="price">from £65</span></li>
+      <li><span>Bathrooms</span><span class="price">from £450</span></li>
+      <li><span>Heating &amp; Radiators</span><span class="price">from £75</span></li>
+    </ul>
+    </section>
+        <section aria-label="Area">
+      <h2>Area</h2>
+      <p>Wokingham, Twyford, Finchampstead, Crowthorne &amp; East Berkshire.</p>
+    </section>
+    <p class="enquire"><a href="mailto:hello@wokinghamplumbfix.example?subject=Enquiry+%E2%80%94+Wokingham+Plumb+Fix">Enquire</a></p>
+  </main>
+  <footer>
+    <p>Wokingham Plumb Fix</p>
   </footer>
-
-  <!-- 7) Single sticky mobile bar: Call and/or Directions (never a second bar) -->
-    <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-primary-95 backdrop-blur border-t border-white-20 px-3 py-2.5 flex gap-2" style="padding-bottom: calc(0.625rem + env(safe-area-inset-bottom));" data-sticky-bar="call-directions">
-    <a href="tel:+441180000100" class="flex-1 btn-accent text-slate-900 font-extrabold text-center py-3 rounded-xl text-sm inline-flex items-center justify-center gap-1.5"><i data-lucide="phone" class="w-4 h-4"></i> Call</a>
-  </div>
-
-  <script>lucide.createIcons();</script>
+  <div class="bar" data-sticky-bar="call-directions">
+    <a class="call" href="tel:+441180000100">Call 0118 0000100</a>
+</div>
 </body>
 </html>
