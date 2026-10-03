@@ -27,7 +27,7 @@
       font-size: 16px;
       line-height: 1.5;
     }
-    body.has-bar { padding-bottom: 80px; }
+    body.has-bar { padding-bottom: calc(8px + 48px + 8px + 1px + env(safe-area-inset-bottom) + 16px); }
     .wrap {
       max-width: 40rem;
       margin: 0 auto;
@@ -65,7 +65,7 @@
       color: #1C1917;
       background: #F7F4EF;
       font-weight: 700;
-      font-size: 0.875rem;
+      font-size: 1rem;
       line-height: 1.2;
       text-decoration: none;
     }
@@ -95,18 +95,14 @@
     .cuts { padding-top: 8px; }
     .cuts h2 { margin-top: 1.25rem; }
     .cuts-scroll {
-      display: flex;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       gap: 10px;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
       padding: 0 16px 8px;
-      -webkit-overflow-scrolling: touch;
     }
     .cuts-scroll figure {
-      flex: 0 0 70vw;
-      max-width: 280px;
       margin: 0;
-      scroll-snap-align: start;
+      min-width: 0;
     }
     .cuts-scroll img {
       width: 100%;
@@ -151,7 +147,7 @@
     .svc-card .note {
       margin: 6px 0 0;
       color: #5C534A;
-      font-size: 0.875rem;
+      font-size: 1rem;
     }
     .addr { margin: 0 0 12px; color: #1C1917; }
     .hours {
@@ -190,7 +186,7 @@
       display: block;
       margin-top: 6px;
       color: #1C1917;
-      font-size: 0.75rem;
+      font-size: 1rem;
       font-weight: 700;
       letter-spacing: 0.04em;
       text-transform: uppercase;
@@ -213,7 +209,7 @@
       margin: 0 auto;
       padding: 8px 16px 24px;
       color: #5C534A;
-      font-size: 0.875rem;
+      font-size: 1rem;
     }
     footer p { margin: 0; }
     .bar {
@@ -252,7 +248,7 @@
     }
   </style>
 </head>
-<body class="has-bar" data-template="shop-v5">
+<body class="has-bar" data-template="shop-v6">
   <img class="hero-photo" src="/assets/cuts/chair-cut.jpg" alt="A haircut in the chair" />
   <header class="shop-head">
     <div class="lockup">
@@ -268,7 +264,7 @@
     </div>
     <div class="cuts-scroll">
       <figure>
-        <img src="/assets/cuts/fade.jpg" alt="A fade" />
+        <img src="/assets/cuts/shop.jpg" alt="A barber shop" />
       </figure>
       <figure>
         <img src="/assets/cuts/scissor-cut.jpg" alt="A scissor cut" />

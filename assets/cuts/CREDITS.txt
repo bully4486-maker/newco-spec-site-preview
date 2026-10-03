@@ -2,10 +2,13 @@ Example cuts used on every barber demo. Not photographs of these shops.
 Wikimedia Commons downloads returned HTTP 429, so these are Pexels files (saved locally, not hotlinked).
 
 fade.jpg
-Shows: a fade, finished with a razor
-Author: Izzet Çakallı
+UNUSED. Removed from the pages (straight razor on a scalp). File deleted.
+
+shop.jpg
+Shows: a barber shop interior
+Author: Pavel Danilyuk
 License: Pexels License (free to use)
-Source: https://www.pexels.com/photo/a-barber-using-a-razor-blade-12464841/
+Source: https://www.pexels.com/photo/the-interior-of-a-barber-shop-7518728/
 
 scissor-cut.jpg
 Shows: a scissor cut (scissors and comb)
