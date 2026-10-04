@@ -1,0 +1,62 @@
+Example dog photos for the dog-groomer and dog-walker demos. Not photographs of these businesses.
+Pexels files, saved locally, not hotlinked.
+
+groom-header.jpg
+Shows: a dog being bathed
+Author: Goochie Poochie Grooming
+License: Pexels License (free to use)
+Source: https://www.pexels.com/photo/dog-in-bath-19145888/
+
+groom-trim.jpg
+Shows: a groomer trimming a dog
+Author: Goochie Poochie Grooming
+License: Pexels License (free to use)
+Source: https://www.pexels.com/photo/groomer-trimming-dog-19145886/
+
+groom-bath.jpg
+Shows: a dog being bathed in a salon
+Author: Tima Miroshnichenko
+License: Pexels License (free to use)
+Source: https://www.pexels.com/photo/close-up-photo-of-bathing-of-dog-6131165/
+
+groom-scissors.jpg
+Shows: a groomer using scissors on a dog
+Author: Gustavo Fring
+License: Pexels License (free to use)
+Source: https://www.pexels.com/photo/dog-at-a-groomer-6816863/
+
+groom-nails.jpg
+Shows: a dog having its nails trimmed
+Author: Goochie Poochie Grooming
+License: Pexels License (free to use)
+Source: https://www.pexels.com/photo/woman-trimming-dogs-nails-19145889/
+
+walk-header.jpg
+Shows: a dog on a leash outdoors
+Author: Viktoria B.
+License: Pexels License (free to use)
+Source: https://www.pexels.com/photo/a-dog-on-a-leash-10215816/
+
+walk-shepherd.jpg
+Shows: a dog on a leash outdoors
+Author: Alejandra Montenegro
+License: Pexels License (free to use)
+Source: https://www.pexels.com/photo/a-german-shepherd-on-a-leash-outdoors-16221145/
+
+walk-shiba.jpg
+Shows: a dog on a walkway
+Author: Ali Bensoula
+License: Pexels License (free to use)
+Source: https://www.pexels.com/photo/shiba-inu-dog-on-leash-outdoors-on-walkway-29909911/
+
+walk-park.jpg
+Shows: a dog on a leash in a park
+Author: Maria Lourdes Peyregne
+License: Pexels License (free to use)
+Source: https://www.pexels.com/photo/dog-on-leash-in-sunlit-park-35736925/
+
+walk-path.jpg
+Shows: a person walking a dog in a park
+Author: Volker Thimm
+License: Pexels License (free to use)
+Source: https://www.pexels.com/photo/a-man-walking-at-the-park-with-his-dog-9078745/

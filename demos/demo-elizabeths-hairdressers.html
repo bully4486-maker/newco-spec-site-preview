@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Elizabeths Hairdressers — Hairdresser in Wokingham</title>
+  <meta name="description" content="Elizabeths Hairdressers — Hairdresser in Wokingham." />
+  <meta name="robots" content="noindex,nofollow" />
+  <style>
+    :root {
+      --paper: #F7F4EF;
+      --ink: #1C1917;
+      --muted: #5C534A;
+      --line: #E6E0D6;
+      --accent: #8C1C1C;
+      --on-accent: #FFFFFF;
+      --cream: #F7F4EF;
+      --charcoal: #1C1917;
+    }
+    * { box-sizing: border-box; }
+    html { background: #F7F4EF; }
+    body {
+      margin: 0;
+      background: #F7F4EF;
+      color: #1C1917;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    body.has-bar { padding-bottom: calc(8px + 48px + 8px + 1px + env(safe-area-inset-bottom) + 16px); }
+    .wrap {
+      max-width: 40rem;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+    .shop-head {
+      background: #1C1917;
+      color: #F7F4EF;
+    }
+    .lockup {
+      max-width: 40rem;
+      margin: 0 auto;
+      padding: 28px 16px 26px;
+    }
+    h1 {
+      font-size: 2.15rem;
+      line-height: 1.1;
+      margin: 0;
+      font-weight: 700;
+      color: #F7F4EF;
+      letter-spacing: -0.02em;
+    }
+    .lede,
+    .pull {
+      margin: 8px 0 0;
+      color: #F7F4EF;
+    }
+    .pull { margin-top: 4px; }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      margin-top: 16px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      color: #1C1917;
+      background: #F7F4EF;
+      font-weight: 700;
+      font-size: 1rem;
+      line-height: 1.2;
+      text-decoration: none;
+    }
+    a.badge { color: #1C1917; }
+    .shop-head a:focus-visible { outline: 2px solid #F7F4EF; outline-offset: 3px; }
+    main {
+      max-width: 40rem;
+      margin: 0 auto;
+      padding: 8px 16px 16px;
+    }
+    h2 {
+      font-size: 1.35rem;
+      margin: 1.5rem 0 0.5rem;
+      font-weight: 700;
+      color: #1C1917;
+    }
+    p { margin: 0.35rem 0; }
+    .muted { color: #5C534A; }
+    a { color: #1C1917; }
+    a:focus-visible { outline: 2px solid #1C1917; outline-offset: 2px; }
+    .hero-photo {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      display: block;
+    }
+    .cuts { padding-top: 8px; }
+    .cuts h2 { margin-top: 1.25rem; }
+    .cuts-scroll {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      padding: 0 16px 8px;
+    }
+    .cuts-scroll figure {
+      margin: 0;
+      min-width: 0;
+    }
+    .cuts-scroll img {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      display: block;
+      border-radius: 12px;
+      background: #E6E0D6;
+    }
+    .services-band {
+      background: #8C1C1C;
+      padding: 4px 0 28px;
+    }
+    .services-band h2 {
+      color: #FFFFFF;
+      margin-top: 1.35rem;
+    }
+    .svc {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .svc-card {
+      background: #F7F4EF;
+      color: #1C1917;
+      padding: 16px;
+      border-radius: 12px;
+    }
+    .svc-card .name {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #1C1917;
+    }
+    .svc-card .price {
+      margin: 6px 0 0;
+      font-size: 1.65rem;
+      font-weight: 700;
+      line-height: 1.1;
+      color: #1C1917;
+    }
+    .svc-card .note {
+      margin: 6px 0 0;
+      color: #5C534A;
+      font-size: 1rem;
+    }
+    .addr { margin: 0 0 12px; color: #1C1917; }
+    .hours {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      border: 0;
+    }
+    .hours li {
+      list-style: none;
+      margin: 0;
+      padding: 12px;
+      background: #F7F4EF;
+      color: #1C1917;
+      border: 1px solid #E6E0D6;
+      border-radius: 12px;
+    }
+    .hours .day {
+      display: block;
+      font-weight: 700;
+      color: #1C1917;
+    }
+    .hours .when {
+      display: block;
+      margin-top: 2px;
+      color: #1C1917;
+    }
+    .hours li.is-today {
+      border-color: #1C1917;
+      box-shadow: inset 0 0 0 1px #1C1917;
+    }
+    .hours .today {
+      display: block;
+      margin-top: 6px;
+      color: #1C1917;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .hours-line { margin: 0; color: #1C1917; }
+    .map {
+      margin-top: 16px;
+      width: 100%;
+      height: 360px;
+      border: 1px solid #E6E0D6;
+      background: #F7F4EF;
+    }
+    .map iframe { border: 0; width: 100%; height: 360px; display: block; }
+    .visit-dir { margin: 12px 0 0; }
+    .visit-dir a { color: #1C1917; font-weight: 400; }
+    .enquire { margin: 1.5rem 0 0; }
+    .enquire a { color: #1C1917; font-weight: 400; }
+    footer {
+      max-width: 40rem;
+      margin: 0 auto;
+      padding: 8px 16px 24px;
+      color: #5C534A;
+      font-size: 1rem;
+    }
+    footer p { margin: 0; }
+    .bar {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 50;
+      display: flex;
+      gap: 8px;
+      padding: 8px 16px calc(8px + env(safe-area-inset-bottom));
+      background: #F7F4EF;
+      border-top: 1px solid #E6E0D6;
+    }
+    .bar a {
+      flex: 1;
+      min-height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 8px 12px;
+      border-radius: 12px;
+    }
+    .bar a.call { background: #8C1C1C; color: #FFFFFF; }
+    .bar a.directions {
+      background: #F7F4EF;
+      color: #1C1917;
+      border: 1px solid #1C1917;
+    }
+    @media (max-height: 499px) {
+      body.has-bar { padding-bottom: 0; }
+      .bar { position: static; }
+    }
+  </style>
+</head>
+<body class="has-bar" data-template="shop-v7">
+  <img class="hero-photo" src="/assets/cuts/chair-cut.jpg" alt="A haircut in the chair" />
+  <header class="shop-head">
+    <div class="lockup">
+      <h1>Elizabeths Hairdressers</h1>
+      <p class="lede">Hairdresser in Wokingham</p>
+      <p class="pull">On Rances Lane in Wokingham.</p>
+      
+    </div>
+  </header>
+  <section class="cuts" aria-label="Cuts">
+    <div class="wrap">
+      <h2>Cuts</h2>
+    </div>
+    <div class="cuts-scroll">
+      <figure>
+        <img src="/assets/cuts/shop.jpg" alt="A barber shop" />
+      </figure>
+      <figure>
+        <img src="/assets/cuts/scissor-cut.jpg" alt="A scissor cut" />
+      </figure>
+      <figure>
+        <img src="/assets/cuts/beard.jpg" alt="A beard trim" />
+      </figure>
+      <figure>
+        <img src="/assets/cuts/clippers.jpg" alt="A barber using clippers" />
+      </figure>
+    </div>
+  </section>
+  <section class="services-band" aria-label="Services">
+    <div class="wrap">
+      <h2>Services</h2>
+      <div class="svc">
+      <article class="svc-card"><h3 class="name">Haircut</h3><p class="price">from £22</p><p class="note">Classic cut with finish.</p></article>
+      <article class="svc-card"><h3 class="name">Colour</h3><p class="price">from £45</p><p class="note">Colour work, confirm in the shop.</p></article>
+      <article class="svc-card"><h3 class="name">Blow Dry</h3><p class="price">from £28</p><p class="note">Wash and blow dry.</p></article>
+      <article class="svc-card"><h3 class="name">Kids Cut</h3><p class="price">from £14</p><p class="note">Childrens cuts (confirm ages in shop).</p></article>
+    </div>
+    </div>
+  </section>
+  <main>
+        <section aria-label="Visit">
+      <h2>Visit</h2>
+      <p class="addr">67 Rances Lane, Wokingham RG40 2LQ</p>
+      <p class="hours-line">Hours on request</p>
+
+          <div class="map">
+      <iframe title="Map" src="https://maps.google.com/maps?q=Elizabeths+Hairdressers%2C+67+Rances+Lane%2C+Wokingham+RG40+2LQ&z=16&output=embed" width="100%" height="360" style="border:0;width:100%;height:360px;display:block" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    </div>
+      <p class="visit-dir"><a href="https://maps.google.com/?q=Elizabeths+Hairdressers%2C+67+Rances+Lane%2C+Wokingham+RG40+2LQ" rel="noopener noreferrer" target="_blank">Directions</a></p>
+    </section>
+  </main>
+  <footer>
+    <p>Elizabeths Hairdressers</p>
+  </footer>
+  <div class="bar" data-sticky-bar="call-directions">
+    <a class="call" href="tel:+441189782249">Call 0118 978 2249</a>
+    <a class="directions" href="https://maps.google.com/?q=Elizabeths+Hairdressers%2C+67+Rances+Lane%2C+Wokingham+RG40+2LQ" rel="noopener noreferrer" target="_blank">Directions</a>
+</div>
+  <script>
+    (function () {
+      var names = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+      var today = names[new Date().getDay()];
+      var nodes = document.querySelectorAll(".hours li[data-day]");
+      for (var i = 0; i < nodes.length; i++) {
+        if (nodes[i].getAttribute("data-day") === today) {
+          nodes[i].classList.add("is-today");
+          var mark = document.createElement("span");
+          mark.className = "today";
+          mark.textContent = "Today";
+          nodes[i].appendChild(mark);
+        }
+      }
+    })();
+  </script>
+</body>
+</html>
