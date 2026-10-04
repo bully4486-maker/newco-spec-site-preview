@@ -27,3 +27,9 @@ Shows: a haircut in the chair
 Author: cottonbro studio
 License: Pexels License (free to use)
 Source: https://www.pexels.com/photo/photo-of-a-barber-giving-a-haircut-3998397/
+
+clippers.jpg
+Shows: a barber using clippers on a client in the chair
+Author: Sohail Bakhshi
+License: Pexels License (free to use)
+Source: https://www.pexels.com/photo/barber-cutting-hair-of-a-man-sitting-on-a-barber-chair-14011984/
