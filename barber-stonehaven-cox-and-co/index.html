@@ -246,10 +246,24 @@
       body.has-bar { padding-bottom: 0; }
       .bar { position: static; }
     }
+  
+    .spec-draft-banner {
+      background: #B45309;
+      color: #FFFBEB;
+      text-align: center;
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 10px 12px;
+      line-height: 1.35;
+    }
+    .spec-draft-banner span { font-weight: 650; text-transform: none; letter-spacing: 0; display: block; margin-top: 2px; }
   </style>
 </head>
 <body class="has-bar" data-template="shop-v7">
-  <img class="hero-photo" src="/assets/cuts/chair-cut.jpg" alt="A haircut in the chair" />
+    <div class="spec-draft-banner" role="status">DRAFT PREVIEW — not a live customer site<span>Call buttons disabled until publish · guide prices only</span></div>
+<img class="hero-photo" src="/assets/cuts/chair-cut.jpg" alt="A haircut in the chair" />
   <header class="shop-head">
     <div class="lockup">
       <h1>Cox &amp; Co Barbershop</h1>
@@ -280,7 +294,8 @@
   <section class="services-band" aria-label="Services">
     <div class="wrap">
       <h2>Services</h2>
-      <div class="svc">
+            <p class="muted price-disclaimer" style="margin:0.25rem 0 0.75rem;font-size:0.9rem;">Guide prices for layout — confirm in the shop. Not the published price list.</p>
+<div class="svc">
       <article class="svc-card"><h3 class="name">Haircut</h3><p class="price">from £22</p><p class="note">Mens cut tailored to your style.</p></article>
       <article class="svc-card"><h3 class="name">Skin Fade</h3><p class="price">from £26</p><p class="note">Clean fades and tapers.</p></article>
       <article class="svc-card"><h3 class="name">Beard Trim</h3><p class="price">£15</p><p class="note">Beard tidy and finishing lines.</p></article>
