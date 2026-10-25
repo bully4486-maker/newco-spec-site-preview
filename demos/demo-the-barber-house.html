@@ -246,24 +246,10 @@
       body.has-bar { padding-bottom: 0; }
       .bar { position: static; }
     }
-  
-    .spec-draft-banner {
-      background: #B45309;
-      color: #FFFBEB;
-      text-align: center;
-      font-size: 0.8rem;
-      font-weight: 800;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      padding: 10px 12px;
-      line-height: 1.35;
-    }
-    .spec-draft-banner span { font-weight: 650; text-transform: none; letter-spacing: 0; display: block; margin-top: 2px; }
   </style>
 </head>
 <body class="has-bar" data-template="shop-v7">
-    <div class="spec-draft-banner" role="status">DRAFT PREVIEW — not a live customer site<span>Call buttons disabled until publish · guide prices only</span></div>
-<img class="hero-photo" src="/assets/cuts/chair-cut.jpg" alt="A haircut in the chair" />
+  <img class="hero-photo" src="/assets/cuts/chair-cut.jpg" alt="A haircut in the chair" />
   <header class="shop-head">
     <div class="lockup">
       <h1>The Barber House</h1>
@@ -294,8 +280,7 @@
   <section class="services-band" aria-label="Services">
     <div class="wrap">
       <h2>Services</h2>
-            <p class="muted price-disclaimer" style="margin:0.25rem 0 0.75rem;font-size:0.9rem;">Guide prices for layout — confirm in the shop. Not the published price list.</p>
-<div class="svc">
+      <div class="svc">
       <article class="svc-card"><h3 class="name">Haircut</h3><p class="price">£20</p><p class="note">Classic cut tailored to your style.</p></article>
       <article class="svc-card"><h3 class="name">Skin Fade</h3><p class="price">£22</p><p class="note">Smooth blend with precise finish.</p></article>
       <article class="svc-card"><h3 class="name">Beard Trim</h3><p class="price">£13</p><p class="note">Clean shaped trim.</p></article>
@@ -327,7 +312,7 @@
     <p>The Barber House</p>
   </footer>
   <div class="bar" data-sticky-bar="call-directions">
-    <a data-preview-call="1" class="call" href="#preview-call-disabled">Call 01865 607037</a>
+    <a class="call" href="tel:+441865607037">Call 01865 607037</a>
     <a class="directions" href="https://maps.google.com/?q=The+Barber+House%2C+72+High+St%2C+Oxford+OX1+4BA" rel="noopener noreferrer" target="_blank">Directions</a>
 </div>
   <script>
@@ -344,18 +329,6 @@
           nodes[i].appendChild(mark);
         }
       }
-    })();
-  </script>
-
-  <script>
-    (function () {
-      document.addEventListener('click', function (e) {
-        var a = e.target.closest && e.target.closest('a[data-preview-call="1"]');
-        if (!a) return;
-        e.preventDefault();
-        e.stopPropagation();
-        alert('Draft preview — live number unlocked on publish.');
-      }, true);
     })();
   </script>
 </body>
