@@ -246,24 +246,10 @@
       body.has-bar { padding-bottom: 0; }
       .bar { position: static; }
     }
-  
-    .spec-draft-banner {
-      background: #B45309;
-      color: #FFFBEB;
-      text-align: center;
-      font-size: 0.8rem;
-      font-weight: 800;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      padding: 10px 12px;
-      line-height: 1.35;
-    }
-    .spec-draft-banner span { font-weight: 650; text-transform: none; letter-spacing: 0; display: block; margin-top: 2px; }
   </style>
 </head>
 <body class="has-bar" data-template="shop-v7">
-    <div class="spec-draft-banner" role="status">DRAFT PREVIEW — not a live customer site<span>Call buttons disabled until publish · guide prices only</span></div>
-<img class="hero-photo" src="/assets/dogs/groom-header.jpg" alt="A dog being bathed" />
+  <img class="hero-photo" src="/assets/dogs/groom-header.jpg" alt="A dog being bathed" />
   <header class="shop-head">
     <div class="lockup">
       <h1>Tarvin Dog Grooming Studio</h1>
@@ -294,8 +280,7 @@
   <section class="services-band" aria-label="Services">
     <div class="wrap">
       <h2>Services</h2>
-            <p class="muted price-disclaimer" style="margin:0.25rem 0 0.75rem;font-size:0.9rem;">Guide prices for layout — confirm in the shop. Not the published price list.</p>
-<div class="svc">
+      <div class="svc">
       <article class="svc-card"><h3 class="name">Full Groom</h3><p class="price">from £40</p><p class="note">Bath, dry and tidy coat.</p></article>
       <article class="svc-card"><h3 class="name">Bath and Brush</h3><p class="price">from £28</p><p class="note">Wash and brush-out.</p></article>
       <article class="svc-card"><h3 class="name">Nail Trim</h3><p class="price">£12</p><p class="note">Claws and tidy.</p></article>
@@ -319,7 +304,7 @@
     <p>Tarvin Dog Grooming Studio</p>
   </footer>
   <div class="bar" data-sticky-bar="call-directions">
-    <a data-preview-call="1" class="call" href="#preview-call-disabled">Call 07841 596067</a>
+    <a class="call" href="tel:+447841596067">Call 07841 596067</a>
     <a class="directions" href="https://maps.google.com/?q=Tarvin+Dog+Grooming+Studio%2C+Laburnum+Cottage%2C+Broomheath+Lane%2C+Tarvin%2C+Chester+CH3+8HD" rel="noopener noreferrer" target="_blank">Directions</a>
 </div>
   <script>
@@ -336,18 +321,6 @@
           nodes[i].appendChild(mark);
         }
       }
-    })();
-  </script>
-
-  <script>
-    (function () {
-      document.addEventListener('click', function (e) {
-        var a = e.target.closest && e.target.closest('a[data-preview-call="1"]');
-        if (!a) return;
-        e.preventDefault();
-        e.stopPropagation();
-        alert('Draft preview — live number unlocked on publish.');
-      }, true);
     })();
   </script>
 </body>
