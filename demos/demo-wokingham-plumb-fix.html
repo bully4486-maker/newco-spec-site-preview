@@ -97,10 +97,24 @@
       body.has-bar { padding-bottom: 0; }
       .bar { position: static; }
     }
+  
+    .spec-draft-banner {
+      background: #B45309;
+      color: #FFFBEB;
+      text-align: center;
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 10px 12px;
+      line-height: 1.35;
+    }
+    .spec-draft-banner span { font-weight: 650; text-transform: none; letter-spacing: 0; display: block; margin-top: 2px; }
   </style>
 </head>
 <body class="has-bar">
-  <main>
+    <div class="spec-draft-banner" role="status">DRAFT PREVIEW — not a live customer site<span>Call buttons disabled until publish · guide prices only</span></div>
+<main>
     <header>
       <h1>Wokingham Plumb Fix</h1>
       <p class="muted">Plumber in Wokingham</p>
@@ -125,7 +139,19 @@
     <p>Wokingham Plumb Fix</p>
   </footer>
   <div class="bar" data-sticky-bar="call-directions">
-    <a class="call" href="tel:+441180000100">Call 0118 0000100</a>
+    <a data-preview-call="1" class="call" href="#preview-call-disabled">Call 0118 0000100</a>
 </div>
+
+  <script>
+    (function () {
+      document.addEventListener('click', function (e) {
+        var a = e.target.closest && e.target.closest('a[data-preview-call="1"]');
+        if (!a) return;
+        e.preventDefault();
+        e.stopPropagation();
+        alert('Draft preview — live number unlocked on publish.');
+      }, true);
+    })();
+  </script>
 </body>
 </html>

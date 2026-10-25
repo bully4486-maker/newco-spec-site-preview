@@ -51,6 +51,7 @@
   </style>
 </head>
 <body class="font-sans antialiased pb-20 md:pb-0">
+  <div class="spec-draft-banner" role="status" style="background:#B45309;color:#FFFBEB;text-align:center;font-size:0.8rem;font-weight:800;letter-spacing:0.04em;text-transform:uppercase;padding:10px 12px;line-height:1.35;z-index:50;position:relative;">DRAFT PREVIEW — not a live customer site<span style="font-weight:650;text-transform:none;letter-spacing:0;display:block;margin-top:2px;">Demo content · call buttons disabled until publish</span></div>
 <!-- 1) Emergency top bar -->
   <div class="bg-primary text-white text-sm md:text-base">
     <div class="max-w-6xl mx-auto px-4 py-2.5 flex flex-col sm:flex-row items-center justify-between gap-2">
@@ -60,7 +61,7 @@
         <span class="hidden sm:inline text-gray-300 mx-2">|</span>
         <span class="block sm:inline font-semibold text-amber-300">Fast 30-Min Arrival</span>
       </p>
-      <a href="tel:+441865000000" class="inline-flex items-center gap-1.5 bg-accent hover:bg-accent-hover text-slate-900 font-bold px-4 py-1.5 rounded-full text-sm transition"><i data-lucide="phone" class="w-4 h-4"></i> 01865 000000</a>
+      <a data-preview-call="1" href="#preview-call-disabled" class="inline-flex items-center gap-1.5 bg-accent hover:bg-accent-hover text-slate-900 font-bold px-4 py-1.5 rounded-full text-sm transition"><i data-lucide="phone" class="w-4 h-4"></i> 01865 000000</a>
     </div>
   </div>
 
@@ -76,7 +77,7 @@
           <div class="flex items-center gap-1.5 text-xs text-gray-300 mt-0.5"><span>Proposed presence · draft only</span></div>
         </div>
       </div>
-      <a href="tel:+441865000000" class="btn-accent text-slate-900 font-bold px-5 py-2.5 rounded-full text-sm inline-flex items-center gap-1.5 transition"><i data-lucide="phone-call" class="w-4 h-4"></i> Call Now</a>
+      <a data-preview-call="1" href="#preview-call-disabled" class="btn-accent text-slate-900 font-bold px-5 py-2.5 rounded-full text-sm inline-flex items-center gap-1.5 transition"><i data-lucide="phone-call" class="w-4 h-4"></i> Call Now</a>
     </div>
   </nav>
 
@@ -100,7 +101,7 @@
           <a href="mailto:hello@example.invalid?subject=Enquiry%20%E2%80%94%20DEMO Acme Plumbing Oxford" class="btn-accent text-slate-900 font-bold px-6 py-3 rounded-full inline-flex items-center gap-2 transition">
             <i data-lucide="mail" class="w-5 h-5"></i> Enquire
           </a>
-          <a href="tel:+441865000000" class="btn-on-dark font-bold px-6 py-3 rounded-full inline-flex items-center gap-2 transition"><i data-lucide="phone" class="w-5 h-5"></i> Call 01865 000000</a>
+          <a data-preview-call="1" href="#preview-call-disabled" class="btn-on-dark font-bold px-6 py-3 rounded-full inline-flex items-center gap-2 transition"><i data-lucide="phone" class="w-5 h-5"></i> Call 01865 000000</a>
           
         </div>
       </div>
@@ -111,7 +112,7 @@
         <a href="mailto:hello@example.invalid?subject=Enquiry%20%E2%80%94%20DEMO Acme Plumbing Oxford" class="w-full btn-accent text-slate-900 font-extrabold py-3.5 rounded-xl text-sm transition inline-flex items-center justify-center gap-2 mb-3">
           <i data-lucide="mail" class="w-4 h-4"></i> Enquire by email
         </a>
-        <a href="tel:+441865000000" class="w-full btn-navy font-bold py-3 rounded-xl text-sm transition inline-flex items-center justify-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i> Or call 01865 000000</a>
+        <a data-preview-call="1" href="#preview-call-disabled" class="w-full btn-navy font-bold py-3 rounded-xl text-sm transition inline-flex items-center justify-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i> Or call 01865 000000</a>
       </div>
     </div>
   </section>
@@ -248,9 +249,21 @@
 
   <!-- 7) Single sticky mobile bar: Call and/or Directions (never a second bar) -->
     <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-primary-95 backdrop-blur border-t border-white-20 px-3 py-2.5 flex gap-2" style="padding-bottom: calc(0.625rem + env(safe-area-inset-bottom));" data-sticky-bar="call-directions">
-    <a href="tel:+441865000000" class="flex-1 btn-accent text-slate-900 font-extrabold text-center py-3 rounded-xl text-sm inline-flex items-center justify-center gap-1.5"><i data-lucide="phone" class="w-4 h-4"></i> Call</a>
+    <a data-preview-call="1" href="#preview-call-disabled" class="flex-1 btn-accent text-slate-900 font-extrabold text-center py-3 rounded-xl text-sm inline-flex items-center justify-center gap-1.5"><i data-lucide="phone" class="w-4 h-4"></i> Call</a>
   </div>
 
   <script>lucide.createIcons();</script>
+
+  <script>
+    (function () {
+      document.addEventListener('click', function (e) {
+        var a = e.target.closest && e.target.closest('a[data-preview-call="1"]');
+        if (!a) return;
+        e.preventDefault();
+        e.stopPropagation();
+        alert('Draft preview — live number unlocked on publish.');
+      }, true);
+    })();
+  </script>
 </body>
 </html>
